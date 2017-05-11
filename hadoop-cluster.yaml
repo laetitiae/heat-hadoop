@@ -243,6 +243,9 @@ resources:
       save_private_key: True
 
 outputs:
+  bation_public_ip:
+    description: Bastion public ip
+    value: {get_attr: [bastion_floating_ip, floating_ip_address]}
   master_ip:
     description: Master ip
     value: {get_attr: [master, instance_ip]}
